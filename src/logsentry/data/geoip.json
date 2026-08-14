@@ -1,0 +1,18 @@
+[
+  {"cidr": "45.83.0.0/16",    "country": "NL", "city": "Amsterdam",   "lat": 52.3676, "lon": 4.9041,   "asn": "AS49981 Bulletproof hosting"},
+  {"cidr": "185.220.0.0/16",  "country": "DE", "city": "Frankfurt",   "lat": 50.1109, "lon": 8.6821,   "asn": "AS205100 Tor exit range"},
+  {"cidr": "103.207.0.0/16",  "country": "CN", "city": "Shanghai",    "lat": 31.2304, "lon": 121.4737, "asn": "AS4134 Chinanet"},
+  {"cidr": "196.52.0.0/16",   "country": "SC", "city": "Victoria",    "lat": -4.6191, "lon": 55.4513,  "asn": "AS204428 Scanning infrastructure"},
+  {"cidr": "89.248.0.0/16",   "country": "NL", "city": "Rotterdam",   "lat": 51.9244, "lon": 4.4777,   "asn": "AS202425 IP Volume"},
+  {"cidr": "51.15.0.0/16",    "country": "FR", "city": "Paris",       "lat": 48.8566, "lon": 2.3522,   "asn": "AS12876 Scaleway"},
+  {"cidr": "20.150.0.0/16",   "country": "US", "city": "Boydton",     "lat": 36.6676, "lon": -78.3875, "asn": "AS8075 Microsoft Azure"},
+  {"cidr": "34.72.0.0/16",    "country": "US", "city": "Council Bluffs","lat": 41.2619,"lon": -95.8608, "asn": "AS15169 Google Cloud"},
+  {"cidr": "82.102.0.0/16",   "country": "GB", "city": "London",      "lat": 51.5072, "lon": -0.1276,  "asn": "AS9009 M247"},
+  {"cidr": "37.19.0.0/16",    "country": "AE", "city": "Dubai",       "lat": 25.2048, "lon": 55.2708,  "asn": "AS212238 Datacamp"},
+  {"cidr": "94.140.0.0/16",   "country": "RU", "city": "Moscow",      "lat": 55.7558, "lon": 37.6173,  "asn": "AS49505 Selectel"},
+  {"cidr": "212.83.0.0/16",   "country": "QA", "city": "Doha",        "lat": 25.2854, "lon": 51.5310,  "asn": "AS8781 Ooredoo"},
+  {"cidr": "156.146.0.0/16",  "country": "SG", "city": "Singapore",   "lat": 1.3521,  "lon": 103.8198, "asn": "AS212238 VPN egress"},
+  {"cidr": "129.0.0.0/8",     "country": "US", "city": "Ashburn",     "lat": 39.0438, "lon": -77.4874, "asn": "AS14618 Amazon AWS"},
+  {"cidr": "197.210.0.0/16",  "country": "NG", "city": "Lagos",       "lat": 6.5244,  "lon": 3.3792,   "asn": "AS29465 MTN Nigeria"},
+  {"cidr": "191.96.0.0/16",   "country": "BR", "city": "Sao Paulo",   "lat": -23.5505,"lon": -46.6333, "asn": "AS262287 Locaweb"}
+]

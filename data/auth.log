@@ -1,0 +1,165 @@
+Mar 10 10:49:00 web-01 sshd[6275]: Accepted publickey for a.hassan from 10.0.8.3 port 52573 ssh2
+Mar 10 10:49:01 web-01 sshd[9075]: pam_unix(sshd:session): session opened for user a.hassan by (uid=0)
+Mar 10 11:48:00 web-01 sshd[19803]: Accepted publickey for m.rahman from 10.0.8.3 port 43581 ssh2
+Mar 10 11:48:01 web-01 sshd[3476]: pam_unix(sshd:session): session opened for user m.rahman by (uid=0)
+Mar 10 13:58:00 web-01 sshd[29928]: Accepted publickey for j.okoro from 10.0.8.3 port 52830 ssh2
+Mar 10 13:58:01 web-01 sshd[27369]: pam_unix(sshd:session): session opened for user j.okoro by (uid=0)
+Mar 10 17:59:00 web-01 sshd[1329]: Accepted publickey for deploy from 10.0.8.3 port 58709 ssh2
+Mar 10 17:59:01 web-01 sshd[8619]: pam_unix(sshd:session): session opened for user deploy by (uid=0)
+Mar 11 03:14:02 web-01 sshd[13085]: Failed password for root from 45.83.12.9 port 50000 ssh2
+Mar 11 03:14:05 web-01 sshd[19814]: Invalid user admin from 45.83.12.9 port 50001
+Mar 11 03:14:06 web-01 sshd[13161]: Failed password for invalid user admin from 45.83.12.9 port 50001 ssh2
+Mar 11 03:14:10 web-01 sshd[24752]: Failed password for root from 45.83.12.9 port 50002 ssh2
+Mar 11 03:14:14 web-01 sshd[2142]: Failed password for root from 45.83.12.9 port 50003 ssh2
+Mar 11 03:14:16 web-01 sshd[28054]: Invalid user admin from 45.83.12.9 port 50004
+Mar 11 03:14:17 web-01 sshd[5011]: Failed password for invalid user admin from 45.83.12.9 port 50004 ssh2
+Mar 11 03:14:22 web-01 sshd[4627]: Invalid user admin from 45.83.12.9 port 50005
+Mar 11 03:14:23 web-01 sshd[10575]: Failed password for invalid user admin from 45.83.12.9 port 50005 ssh2
+Mar 11 03:14:26 web-01 sshd[12055]: Failed password for root from 45.83.12.9 port 50006 ssh2
+Mar 11 03:14:30 web-01 sshd[23670]: Failed password for root from 45.83.12.9 port 50007 ssh2
+Mar 11 03:14:34 web-01 sshd[10693]: Failed password for root from 45.83.12.9 port 50008 ssh2
+Mar 11 03:14:36 web-01 sshd[1161]: Failed password for root from 45.83.12.9 port 50009 ssh2
+Mar 11 03:14:42 web-01 sshd[18509]: Failed password for root from 45.83.12.9 port 50010 ssh2
+Mar 11 03:14:46 web-01 sshd[7522]: Failed password for root from 45.83.12.9 port 50011 ssh2
+Mar 11 03:14:49 web-01 sshd[18543]: Failed password for root from 45.83.12.9 port 50012 ssh2
+Mar 11 03:14:54 web-01 sshd[28137]: Invalid user admin from 45.83.12.9 port 50013
+Mar 11 03:14:55 web-01 sshd[3588]: Failed password for invalid user admin from 45.83.12.9 port 50013 ssh2
+Mar 11 03:14:56 web-01 sshd[15323]: Invalid user admin from 45.83.12.9 port 50014
+Mar 11 03:14:57 web-01 sshd[15493]: Failed password for invalid user admin from 45.83.12.9 port 50014 ssh2
+Mar 11 03:15:01 web-01 sshd[22505]: Failed password for root from 45.83.12.9 port 50015 ssh2
+Mar 11 03:15:04 web-01 sshd[24484]: Failed password for root from 45.83.12.9 port 50016 ssh2
+Mar 11 03:15:10 web-01 sshd[28211]: Failed password for root from 45.83.12.9 port 50017 ssh2
+Mar 11 03:15:12 web-01 sshd[19722]: Invalid user admin from 45.83.12.9 port 50018
+Mar 11 03:15:13 web-01 sshd[7167]: Failed password for invalid user admin from 45.83.12.9 port 50018 ssh2
+Mar 11 03:15:17 web-01 sshd[29597]: Failed password for root from 45.83.12.9 port 50019 ssh2
+Mar 11 03:15:22 web-01 sshd[28321]: Failed password for root from 45.83.12.9 port 50020 ssh2
+Mar 11 03:15:25 web-01 sshd[21046]: Failed password for root from 45.83.12.9 port 50021 ssh2
+Mar 11 03:15:30 web-01 sshd[18460]: Invalid user admin from 45.83.12.9 port 50022
+Mar 11 03:15:31 web-01 sshd[28592]: Failed password for invalid user admin from 45.83.12.9 port 50022 ssh2
+Mar 11 03:15:32 web-01 sshd[2465]: Failed password for root from 45.83.12.9 port 50023 ssh2
+Mar 11 03:15:37 web-01 sshd[14009]: Failed password for root from 45.83.12.9 port 50024 ssh2
+Mar 11 03:15:40 web-01 sshd[10823]: Invalid user admin from 45.83.12.9 port 50025
+Mar 11 03:15:41 web-01 sshd[6874]: Failed password for invalid user admin from 45.83.12.9 port 50025 ssh2
+Mar 11 03:15:45 web-01 sshd[16433]: Failed password for root from 45.83.12.9 port 50026 ssh2
+Mar 11 03:15:50 web-01 sshd[8665]: Invalid user admin from 45.83.12.9 port 50027
+Mar 11 03:15:51 web-01 sshd[6937]: Failed password for invalid user admin from 45.83.12.9 port 50027 ssh2
+Mar 11 03:15:52 web-01 sshd[25845]: Invalid user admin from 45.83.12.9 port 50028
+Mar 11 03:15:53 web-01 sshd[27846]: Failed password for invalid user admin from 45.83.12.9 port 50028 ssh2
+Mar 11 03:15:57 web-01 sshd[27154]: Failed password for root from 45.83.12.9 port 50029 ssh2
+Mar 11 03:16:02 web-01 sshd[22834]: Failed password for root from 45.83.12.9 port 50030 ssh2
+Mar 11 03:16:06 web-01 sshd[17988]: Failed password for root from 45.83.12.9 port 50031 ssh2
+Mar 11 03:16:08 web-01 sshd[23976]: Invalid user admin from 45.83.12.9 port 50032
+Mar 11 03:16:09 web-01 sshd[9836]: Failed password for invalid user admin from 45.83.12.9 port 50032 ssh2
+Mar 11 03:16:14 web-01 sshd[21252]: Failed password for root from 45.83.12.9 port 50033 ssh2
+Mar 11 03:16:17 web-01 sshd[1421]: Invalid user admin from 45.83.12.9 port 50034
+Mar 11 03:16:18 web-01 sshd[13624]: Failed password for invalid user admin from 45.83.12.9 port 50034 ssh2
+Mar 11 03:16:22 web-01 sshd[1093]: Failed password for root from 45.83.12.9 port 50035 ssh2
+Mar 11 03:16:24 web-01 sshd[12495]: Failed password for root from 45.83.12.9 port 50036 ssh2
+Mar 11 03:16:30 web-01 sshd[22380]: Failed password for root from 45.83.12.9 port 50037 ssh2
+Mar 11 03:16:32 web-01 sshd[19885]: Failed password for root from 45.83.12.9 port 50038 ssh2
+Mar 11 03:16:38 web-01 sshd[29383]: Invalid user admin from 45.83.12.9 port 50039
+Mar 11 03:16:39 web-01 sshd[23454]: Failed password for invalid user admin from 45.83.12.9 port 50039 ssh2
+Mar 11 03:16:42 web-01 sshd[29068]: Failed password for root from 45.83.12.9 port 50040 ssh2
+Mar 11 03:16:45 web-01 sshd[6189]: Failed password for root from 45.83.12.9 port 50041 ssh2
+Mar 11 03:16:49 web-01 sshd[4561]: Failed password for root from 45.83.12.9 port 50042 ssh2
+Mar 11 03:16:52 web-01 sshd[10790]: Failed password for root from 45.83.12.9 port 50043 ssh2
+Mar 11 03:16:57 web-01 sshd[2711]: Failed password for root from 45.83.12.9 port 50044 ssh2
+Mar 11 03:17:02 web-01 sshd[2233]: Failed password for root from 45.83.12.9 port 50045 ssh2
+Mar 11 03:17:04 web-01 sshd[14864]: Failed password for root from 45.83.12.9 port 50046 ssh2
+Mar 11 03:17:10 web-01 sshd[12917]: Invalid user admin from 45.83.12.9 port 50047
+Mar 11 03:17:11 web-01 sshd[8575]: Failed password for invalid user admin from 45.83.12.9 port 50047 ssh2
+Mar 11 03:17:13 web-01 sshd[3632]: Failed password for root from 45.83.12.9 port 50048 ssh2
+Mar 11 03:17:17 web-01 sshd[14900]: Failed password for root from 45.83.12.9 port 50049 ssh2
+Mar 11 03:17:21 web-01 sshd[20164]: Failed password for root from 45.83.12.9 port 50050 ssh2
+Mar 11 03:17:25 web-01 sshd[3695]: Failed password for root from 45.83.12.9 port 50051 ssh2
+Mar 11 03:17:30 web-01 sshd[11777]: Failed password for root from 45.83.12.9 port 50052 ssh2
+Mar 11 03:17:32 web-01 sshd[19942]: Failed password for root from 45.83.12.9 port 50053 ssh2
+Mar 11 03:17:38 web-01 sshd[10867]: Failed password for root from 45.83.12.9 port 50054 ssh2
+Mar 11 03:17:40 web-01 sshd[12978]: Failed password for root from 45.83.12.9 port 50055 ssh2
+Mar 11 03:17:44 web-01 sshd[20879]: Invalid user admin from 45.83.12.9 port 50056
+Mar 11 03:17:45 web-01 sshd[17683]: Failed password for invalid user admin from 45.83.12.9 port 50056 ssh2
+Mar 11 03:17:49 web-01 sshd[4393]: Failed password for root from 45.83.12.9 port 50057 ssh2
+Mar 11 03:17:53 web-01 sshd[27565]: Invalid user admin from 45.83.12.9 port 50058
+Mar 11 03:17:54 web-01 sshd[16938]: Failed password for invalid user admin from 45.83.12.9 port 50058 ssh2
+Mar 11 03:17:57 web-01 sshd[15260]: Failed password for root from 45.83.12.9 port 50059 ssh2
+Mar 11 03:18:01 web-01 sshd[8303]: Failed password for root from 45.83.12.9 port 50060 ssh2
+Mar 11 03:18:06 web-01 sshd[16728]: Invalid user admin from 45.83.12.9 port 50061
+Mar 11 03:18:07 web-01 sshd[3939]: Failed password for invalid user admin from 45.83.12.9 port 50061 ssh2
+Mar 11 03:18:10 web-01 sshd[13286]: Failed password for root from 45.83.12.9 port 50062 ssh2
+Mar 11 03:18:14 web-01 sshd[24665]: Failed password for root from 45.83.12.9 port 50063 ssh2
+Mar 11 03:47:00 web-01 sshd[12084]: Accepted password for root from 45.83.12.9 port 51999 ssh2
+Mar 11 03:47:01 web-01 sshd[16309]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Mar 11 03:47:40 web-01 sudo[9362]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Mar 11 03:48:35 web-01 sudo[7771]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc_update
+Mar 11 03:49:20 web-01 sudo[3591]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl stop auditd
+Mar 11 03:50:05 web-01 sudo[7247]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/bin/bash -c history -c
+Mar 11 03:50:40 web-01 sudo[22481]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee -a /root/.ssh/authorized_keys
+Mar 11 09:00:00 web-01 sshd[5280]: Accepted publickey for m.rahman from 82.102.19.4 port 44001 ssh2
+Mar 11 12:42:00 web-01 sshd[19638]: Accepted publickey for j.okoro from 10.0.4.7 port 51572 ssh2
+Mar 11 12:42:01 web-01 sshd[21131]: pam_unix(sshd:session): session opened for user j.okoro by (uid=0)
+Mar 11 13:56:00 web-01 sshd[8513]: Accepted publickey for a.hassan from 192.168.10.22 port 53217 ssh2
+Mar 11 13:56:01 web-01 sshd[1430]: pam_unix(sshd:session): session opened for user a.hassan by (uid=0)
+Mar 11 14:57:00 web-01 sshd[26726]: Accepted publickey for deploy from 10.0.4.7 port 56560 ssh2
+Mar 11 14:57:01 web-01 sshd[1452]: pam_unix(sshd:session): session opened for user deploy by (uid=0)
+Mar 11 15:15:00 web-01 sshd[14249]: Accepted publickey for m.rahman from 10.0.4.19 port 50280 ssh2
+Mar 11 15:15:01 web-01 sshd[4995]: pam_unix(sshd:session): session opened for user m.rahman by (uid=0)
+Mar 11 23:00:00 web-01 sshd[9681]: Accepted publickey for m.rahman from 156.146.55.12 port 44210 ssh2
+Mar 12 11:05:00 web-01 sshd[9730]: Invalid user admin from 185.220.101.45 port 40000
+Mar 12 11:05:01 web-01 sshd[4079]: Failed password for invalid user admin from 185.220.101.45 port 40000 ssh2
+Mar 12 11:05:37 web-01 sshd[19746]: Invalid user admin from 185.220.101.45 port 40001
+Mar 12 11:05:38 web-01 sshd[22242]: Failed password for invalid user admin from 185.220.101.45 port 40001 ssh2
+Mar 12 11:07:00 web-01 sshd[14718]: Invalid user administrator from 185.220.101.45 port 40010
+Mar 12 11:07:01 web-01 sshd[16126]: Failed password for invalid user administrator from 185.220.101.45 port 40010 ssh2
+Mar 12 11:07:37 web-01 sshd[17987]: Invalid user administrator from 185.220.101.45 port 40011
+Mar 12 11:07:38 web-01 sshd[4253]: Failed password for invalid user administrator from 185.220.101.45 port 40011 ssh2
+Mar 12 11:09:00 web-01 sshd[1094]: Invalid user root from 185.220.101.45 port 40020
+Mar 12 11:09:01 web-01 sshd[2369]: Failed password for invalid user root from 185.220.101.45 port 40020 ssh2
+Mar 12 11:09:37 web-01 sshd[18069]: Invalid user root from 185.220.101.45 port 40021
+Mar 12 11:09:38 web-01 sshd[10113]: Failed password for invalid user root from 185.220.101.45 port 40021 ssh2
+Mar 12 11:11:00 web-01 sshd[6224]: Invalid user test from 185.220.101.45 port 40030
+Mar 12 11:11:01 web-01 sshd[20209]: Failed password for invalid user test from 185.220.101.45 port 40030 ssh2
+Mar 12 11:11:37 web-01 sshd[10639]: Invalid user test from 185.220.101.45 port 40031
+Mar 12 11:11:38 web-01 sshd[20570]: Failed password for invalid user test from 185.220.101.45 port 40031 ssh2
+Mar 12 11:13:00 web-01 sshd[25615]: Invalid user guest from 185.220.101.45 port 40040
+Mar 12 11:13:01 web-01 sshd[22422]: Failed password for invalid user guest from 185.220.101.45 port 40040 ssh2
+Mar 12 11:13:37 web-01 sshd[27745]: Invalid user guest from 185.220.101.45 port 40041
+Mar 12 11:13:38 web-01 sshd[11046]: Failed password for invalid user guest from 185.220.101.45 port 40041 ssh2
+Mar 12 11:15:00 web-01 sshd[12301]: Invalid user oracle from 185.220.101.45 port 40050
+Mar 12 11:15:01 web-01 sshd[3664]: Failed password for invalid user oracle from 185.220.101.45 port 40050 ssh2
+Mar 12 11:15:37 web-01 sshd[24462]: Invalid user oracle from 185.220.101.45 port 40051
+Mar 12 11:15:38 web-01 sshd[1843]: Failed password for invalid user oracle from 185.220.101.45 port 40051 ssh2
+Mar 12 11:17:00 web-01 sshd[15056]: Invalid user postgres from 185.220.101.45 port 40060
+Mar 12 11:17:01 web-01 sshd[1067]: Failed password for invalid user postgres from 185.220.101.45 port 40060 ssh2
+Mar 12 11:17:37 web-01 sshd[24051]: Invalid user postgres from 185.220.101.45 port 40061
+Mar 12 11:17:38 web-01 sshd[8534]: Failed password for invalid user postgres from 185.220.101.45 port 40061 ssh2
+Mar 12 11:19:00 web-01 sshd[21708]: Invalid user jenkins from 185.220.101.45 port 40070
+Mar 12 11:19:01 web-01 sshd[21697]: Failed password for invalid user jenkins from 185.220.101.45 port 40070 ssh2
+Mar 12 11:19:37 web-01 sshd[7145]: Invalid user jenkins from 185.220.101.45 port 40071
+Mar 12 11:19:38 web-01 sshd[27876]: Failed password for invalid user jenkins from 185.220.101.45 port 40071 ssh2
+Mar 12 11:21:00 web-01 sshd[19551]: Invalid user git from 185.220.101.45 port 40080
+Mar 12 11:21:01 web-01 sshd[15394]: Failed password for invalid user git from 185.220.101.45 port 40080 ssh2
+Mar 12 11:21:37 web-01 sshd[8288]: Invalid user git from 185.220.101.45 port 40081
+Mar 12 11:21:38 web-01 sshd[5663]: Failed password for invalid user git from 185.220.101.45 port 40081 ssh2
+Mar 12 11:23:00 web-01 sshd[12367]: Invalid user ubuntu from 185.220.101.45 port 40090
+Mar 12 11:23:01 web-01 sshd[29778]: Failed password for invalid user ubuntu from 185.220.101.45 port 40090 ssh2
+Mar 12 11:23:37 web-01 sshd[12267]: Invalid user ubuntu from 185.220.101.45 port 40091
+Mar 12 11:23:38 web-01 sshd[18240]: Failed password for invalid user ubuntu from 185.220.101.45 port 40091 ssh2
+Mar 12 11:25:00 web-01 sshd[13454]: Invalid user ftp from 185.220.101.45 port 40100
+Mar 12 11:25:01 web-01 sshd[10036]: Failed password for invalid user ftp from 185.220.101.45 port 40100 ssh2
+Mar 12 11:25:37 web-01 sshd[10673]: Invalid user ftp from 185.220.101.45 port 40101
+Mar 12 11:25:38 web-01 sshd[11516]: Failed password for invalid user ftp from 185.220.101.45 port 40101 ssh2
+Mar 12 11:27:00 web-01 sshd[4816]: Invalid user webadmin from 185.220.101.45 port 40110
+Mar 12 11:27:01 web-01 sshd[1729]: Failed password for invalid user webadmin from 185.220.101.45 port 40110 ssh2
+Mar 12 11:27:37 web-01 sshd[4715]: Invalid user webadmin from 185.220.101.45 port 40111
+Mar 12 11:27:38 web-01 sshd[15459]: Failed password for invalid user webadmin from 185.220.101.45 port 40111 ssh2
+Mar 12 14:00:00 web-01 sshd[4124]: Accepted password for j.okoro from 212.83.44.18 port 43122 ssh2
+Mar 12 14:40:00 web-01 sshd[2721]: Accepted password for j.okoro from 191.96.77.204 port 51880 ssh2
+Mar 12 15:47:00 web-01 sshd[15382]: Accepted publickey for m.rahman from 10.0.8.3 port 40408 ssh2
+Mar 12 15:47:01 web-01 sshd[1141]: pam_unix(sshd:session): session opened for user m.rahman by (uid=0)
+Mar 12 16:39:00 web-01 sshd[3995]: Accepted publickey for a.hassan from 10.0.4.7 port 42367 ssh2
+Mar 12 16:39:01 web-01 sshd[17354]: pam_unix(sshd:session): session opened for user a.hassan by (uid=0)
+Mar 12 17:02:46 web-01 sshd[16626]: Failed password for j.okoro from 10.0.4.7 port 46441 ssh2
+Mar 12 17:03:00 web-01 sshd[22927]: Accepted publickey for j.okoro from 10.0.4.7 port 46449 ssh2
+Mar 12 17:03:01 web-01 sshd[21011]: pam_unix(sshd:session): session opened for user j.okoro by (uid=0)
+Mar 12 17:29:00 web-01 sshd[22099]: Accepted publickey for deploy from 10.0.8.3 port 46585 ssh2
+Mar 12 17:29:01 web-01 sshd[12218]: pam_unix(sshd:session): session opened for user deploy by (uid=0)

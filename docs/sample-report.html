@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LogSentry report</title>
+<style>
+  :root {
+    --bg: #f7f8fa; --card: #ffffff; --ink: #1a202c; --muted: #718096;
+    --line: #e2e8f0; --accent: #2b6cb0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12151a; --card:#1a1f27; --ink:#e8eaed; --muted:#9aa5b1;
+             --line:#2d3542; --accent:#63a4ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.6
+         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing:-.02em; }
+  .sub { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px;
+            padding:20px; margin-bottom:24px; }
+  .stats { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .tile { flex:1 1 90px; text-align:center; padding:12px 8px; border:1px solid var(--line);
+           border-radius:10px; }
+  .tile .num { display:block; font-size:26px; font-weight:700; line-height:1.1; }
+  .tile .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+                color:var(--muted); }
+  .bar { display:flex; height:10px; border-radius:6px; overflow:hidden;
+          background:var(--line); }
+  .bar .seg { height:100%; }
+  dl.facts { display:grid; grid-template-columns:auto 1fr; gap:6px 18px; margin:16px 0 0;
+              font-size:14px; }
+  dl.facts dt { color:var(--muted); }
+  dl.facts dd { margin:0; }
+  .finding { background:var(--card); border:1px solid var(--line); border-left-width:5px;
+              border-radius:10px; padding:16px 18px; margin-bottom:14px; }
+  .finding.sev-critical { border-left-color:#c0392b; }
+  .finding.sev-high     { border-left-color:#d35400; }
+  .finding.sev-medium   { border-left-color:#b7791f; }
+  .finding.sev-low      { border-left-color:#2b6cb0; }
+  .finding.sev-info     { border-left-color:#4a5568; }
+  .finding header { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .finding h3 { font-size:16px; margin:0; flex:1 1 auto; }
+  .badge { font-size:10px; font-weight:700; letter-spacing:.08em; color:#fff;
+            padding:3px 8px; border-radius:20px; }
+  .sev-critical .badge { background:#c0392b; }
+  .sev-high     .badge { background:#d35400; }
+  .sev-medium   .badge { background:#b7791f; }
+  .sev-low      .badge { background:#2b6cb0; }
+  .sev-info     .badge { background:#4a5568; }
+  .rule-id { font-size:12px; color:var(--muted); font-family:ui-monospace,monospace; }
+  .meta { margin:12px 0; font-size:13px; }
+  .meta .row { display:flex; gap:12px; padding:2px 0; }
+  .meta .key { min-width:110px; color:var(--muted); }
+  .desc { margin:10px 0; }
+  .rec { background:rgba(43,108,176,.09); border-radius:8px; padding:10px 12px;
+          font-size:14px; margin:10px 0; }
+  .chip { display:inline-block; background:var(--line); border-radius:5px;
+           padding:2px 7px; font-size:11px; margin:2px 3px 2px 0; }
+  .geo { color:var(--muted); font-size:12px; }
+  .muted { color:var(--muted); }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12.5px; }
+  details summary { cursor:pointer; color:var(--accent); font-size:13px; }
+  ul.evidence { list-style:none; padding:10px 0 0; margin:0; }
+  ul.evidence li { background:var(--bg); border:1px solid var(--line); border-radius:6px;
+                    padding:6px 9px; margin-bottom:5px; overflow-x:auto;
+                    white-space:pre; }
+  .empty { text-align:center; color:var(--muted); padding:40px; }
+  footer { color:var(--muted); font-size:12px; text-align:center; margin-top:32px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LogSentry report</h1>
+  <p class="sub">Generated 2026-08-14 00:12:33</p>
+
+  <section class="panel">
+    <div class="stats"><div class="tile"><span class="num" style="color:#c0392b">2</span>
+        <span class="lbl">critical</span></div><div class="tile"><span class="num" style="color:#d35400">2</span>
+        <span class="lbl">high</span></div><div class="tile"><span class="num" style="color:#b7791f">4</span>
+        <span class="lbl">medium</span></div><div class="tile"><span class="num" style="color:#2b6cb0">2</span>
+        <span class="lbl">low</span></div><div class="tile"><span class="num" style="color:#4a5568">0</span>
+        <span class="lbl">info</span></div></div>
+    <div class="bar"><div class='seg' style='width:20.00%;background:#c0392b' title='critical: 2'></div><div class='seg' style='width:20.00%;background:#d35400' title='high: 2'></div><div class='seg' style='width:40.00%;background:#b7791f' title='medium: 4'></div><div class='seg' style='width:20.00%;background:#2b6cb0' title='low: 2'></div></div>
+    <dl class="facts">
+      <dt>Files analysed</dt><dd>data/auth.log, data/access.log</dd>
+      <dt>Events parsed</dt><dd>568 <span class="muted">(0 lines skipped)</span></dd>
+      <dt>Log time range</dt><dd>2025-03-10 06:00 &rarr; 2025-03-12 22:47</dd>
+      <dt>Total findings</dt><dd>10</dd>
+      <dt>Source IPs flagged</dt><dd>6</dd>
+    </dl>
+  </section>
+
+  <h2 style="font-size:18px;margin:0 0 12px;">Findings</h2>
+  
+    <article class="finding sev-critical">
+      <header>
+        <span class="badge">CRITICAL</span>
+        <h3>1. Probing for sensitive paths and injection payloads — server responded 200</h3>
+        <span class="rule-id">LS-007</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>89.248.165.72</code> <span class="geo">Rotterdam, NL</span></span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-12 05:12:00 &rarr; 05:12:55 <span class='muted'>(6 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1190 - Exploit Public-Facing Application</span> <span class='chip'>T1083 - File and Directory Discovery</span></span></div></div>
+      <p class="desc">89.248.165.72 requested 6 sensitive paths including /.aws/credentials, /.env, /.git/HEAD, /.git/config .... 3 of these returned a 2xx status, meaning content was served — assume exposure until proven otherwise.</p>
+      <div class='rec'><strong>Recommended action.</strong> Verify what was served, rotate any credentials in the exposed file, and confirm dotfiles are blocked at the web server.</div>
+      <details>
+        <summary>Evidence (3 sample lines)</summary>
+        <ul class="evidence"><li><code>89.248.165.72 - - [12/Mar/2025:05:12:00 +0000] &quot;GET /.env HTTP/1.1&quot; 200 1834 &quot;-&quot; &quot;Go-http-client/2.0&quot;</code></li><li><code>89.248.165.72 - - [12/Mar/2025:05:12:11 +0000] &quot;GET /.git/config HTTP/1.1&quot; 200 412 &quot;-&quot; &quot;Go-http-client/2.0&quot;</code></li><li><code>89.248.165.72 - - [12/Mar/2025:05:12:22 +0000] &quot;GET /.git/HEAD HTTP/1.1&quot; 200 23 &quot;-&quot; &quot;Go-http-client/2.0&quot;</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-critical">
+      <header>
+        <span class="badge">CRITICAL</span>
+        <h3>2. SSH brute-force attempt with successful login</h3>
+        <span class="rule-id">LS-001</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>45.83.12.9</code> <span class="geo">Amsterdam, NL</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>admin, root</span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 03:14:02 &rarr; 03:18:14 <span class='muted'>(81 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1110.001 - Brute Force: Password Guessing</span></span></div></div>
+      <p class="desc">81 failed authentications from 45.83.12.9 in 252s (19.3/min) targeting 2 accounts. A SUCCESSFUL login from this IP followed as &#x27;root&#x27; at 2025-03-11 03:47:00 - treat as a confirmed compromise.</p>
+      <div class='rec'><strong>Recommended action.</strong> Isolate the account and rotate its credentials, then block 45.83.12.9 at the firewall and review what the session touched.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>Mar 11 03:14:02 web-01 sshd[13085]: Failed password for root from 45.83.12.9 port 50000 ssh2</code></li><li><code>Mar 11 03:14:05 web-01 sshd[19814]: Invalid user admin from 45.83.12.9 port 50001</code></li><li><code>Mar 11 03:14:06 web-01 sshd[13161]: Failed password for invalid user admin from 45.83.12.9 port 50001 ssh2</code></li><li><code>Mar 11 03:14:10 web-01 sshd[24752]: Failed password for root from 45.83.12.9 port 50002 ssh2</code></li><li><code>Mar 11 03:14:14 web-01 sshd[2142]: Failed password for root from 45.83.12.9 port 50003 ssh2</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-high">
+      <header>
+        <span class="badge">HIGH</span>
+        <h3>3. Impossible travel between successful logins</h3>
+        <span class="rule-id">LS-003</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>191.96.77.204</code> <span class="geo">Sao Paulo, BR</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>j.okoro</span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-12 14:00:00 &rarr; 14:40:00 <span class='muted'>(2 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1078 - Valid Accounts</span></span></div></div>
+      <p class="desc">Account &#x27;j.okoro&#x27; logged in from Doha, QA (212.83.44.18) and then Sao Paulo, BR (191.96.77.204) 40 minutes later — 11,871 km apart, an implied travel speed of 17,807 km/h. A VPN or mobile carrier NAT can explain this; credential theft can too.</p>
+      <div class='rec'><strong>Recommended action.</strong> Confirm with the account owner whether they were in Sao Paulo, BR. If not, revoke active sessions, rotate credentials and audit actions taken from the second IP.</div>
+      <details>
+        <summary>Evidence (2 sample lines)</summary>
+        <ul class="evidence"><li><code>Mar 12 14:00:00 web-01 sshd[4124]: Accepted password for j.okoro from 212.83.44.18 port 43122 ssh2</code></li><li><code>Mar 12 14:40:00 web-01 sshd[2721]: Accepted password for j.okoro from 191.96.77.204 port 51880 ssh2</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-high">
+      <header>
+        <span class="badge">HIGH</span>
+        <h3>4. Password spraying across multiple accounts</h3>
+        <span class="rule-id">LS-002</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>185.220.101.45</code> <span class="geo">Frankfurt, DE</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>admin, administrator, ftp, git, guest, jenkins, oracle, postgres, root, test <span class='muted'>(+2 more)</span></span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-12 11:05:00 &rarr; 11:27:00 <span class='muted'>(45 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1110.003 - Brute Force: Password Spraying</span></span></div></div>
+      <p class="desc">185.220.101.45 attempted authentication against 12 distinct accounts with at most 2 attempts each over 22 minutes. Low per-account volume of this kind is designed to stay below lockout thresholds.</p>
+      <div class='rec'><strong>Recommended action.</strong> Check whether any of the sprayed accounts logged in successfully, enforce MFA, and add source-based rate limiting.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>Mar 12 11:05:00 web-01 sshd[9730]: Invalid user admin from 185.220.101.45 port 40000</code></li><li><code>Mar 12 11:05:01 web-01 sshd[4079]: Failed password for invalid user admin from 185.220.101.45 port 40000 ssh2</code></li><li><code>Mar 12 11:05:37 web-01 sshd[19746]: Invalid user admin from 185.220.101.45 port 40001</code></li><li><code>Mar 12 11:05:38 web-01 sshd[22242]: Failed password for invalid user admin from 185.220.101.45 port 40001 ssh2</code></li><li><code>Mar 12 11:07:00 web-01 sshd[14718]: Invalid user administrator from 185.220.101.45 port 40010</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-medium">
+      <header>
+        <span class="badge">MEDIUM</span>
+        <h3>5. SSH brute-force attempt</h3>
+        <span class="rule-id">LS-001</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>185.220.101.45</code> <span class="geo">Frankfurt, DE</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>admin, administrator, ftp, git, guest, jenkins, oracle, postgres, root, test <span class='muted'>(+2 more)</span></span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-12 11:05:00 &rarr; 11:27:38 <span class='muted'>(48 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1110.001 - Brute Force: Password Guessing</span></span></div></div>
+      <p class="desc">48 failed authentications from 185.220.101.45 in 1358s (2.1/min) targeting 12 accounts.</p>
+      <div class='rec'><strong>Recommended action.</strong> Block 185.220.101.45, and confirm fail2ban/rate limiting is active on this host.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>Mar 12 11:05:00 web-01 sshd[9730]: Invalid user admin from 185.220.101.45 port 40000</code></li><li><code>Mar 12 11:05:01 web-01 sshd[4079]: Failed password for invalid user admin from 185.220.101.45 port 40000 ssh2</code></li><li><code>Mar 12 11:05:37 web-01 sshd[19746]: Invalid user admin from 185.220.101.45 port 40001</code></li><li><code>Mar 12 11:05:38 web-01 sshd[22242]: Failed password for invalid user admin from 185.220.101.45 port 40001 ssh2</code></li><li><code>Mar 12 11:07:00 web-01 sshd[14718]: Invalid user administrator from 185.220.101.45 port 40010</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-medium">
+      <header>
+        <span class="badge">MEDIUM</span>
+        <h3>6. Sensitive command executed via sudo</h3>
+        <span class="rule-id">LS-005</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Accounts</span><span class='val'>root</span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 03:47:40 &rarr; 03:50:40 <span class='muted'>(5 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching</span> <span class='chip'>T1070 - Indicator Removal</span></span></div></div>
+      <p class="desc">&#x27;root&#x27; ran 5 sudo commands affecting credentials, logging or firewall state: /bin/bash -c history -c; /bin/cat /etc/shadow; /usr/bin/systemctl stop auditd ...</p>
+      <div class='rec'><strong>Recommended action.</strong> Match each command against a change ticket. Clearing history or stopping auditd immediately after a login is a strong anti-forensics signal.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>Mar 11 03:47:40 web-01 sudo[9362]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/bin/cat /etc/shadow</code></li><li><code>Mar 11 03:48:35 web-01 sudo[7771]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc_update</code></li><li><code>Mar 11 03:49:20 web-01 sudo[3591]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/systemctl stop auditd</code></li><li><code>Mar 11 03:50:05 web-01 sudo[7247]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/bin/bash -c history -c</code></li><li><code>Mar 11 03:50:40 web-01 sudo[22481]: root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee -a /root/.ssh/authorized_keys</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-medium">
+      <header>
+        <span class="badge">MEDIUM</span>
+        <h3>7. Automated web vulnerability scanning</h3>
+        <span class="rule-id">LS-006</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>196.52.43.87</code> <span class="geo">Victoria, SC</span></span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 02:41:00 &rarr; 02:44:00 <span class='muted'>(37 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1595.002 - Active Scanning: Vulnerability Scanning</span></span></div></div>
+      <p class="desc">196.52.43.87 issued 37 requests showing signs of automated scanning — scanner 2 user-agents: python-requests/2.31.0, sqlmap/1.7.11#stable (https://sqlmap.org); 36 HTTP 404s within 2 minutes. Scanning usually precedes exploitation attempts.</p>
+      <div class='rec'><strong>Recommended action.</strong> Rate-limit or block 196.52.43.87 at the WAF/edge, and verify that any endpoint it reached with a 200 is meant to be public.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>196.52.43.87 - - [11/Mar/2025:02:41:00 +0000] &quot;GET /wp-login.php HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;sqlmap/1.7.11#stable (https://sqlmap.org)&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:03 +0000] &quot;GET /wp-admin/ HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:06 +0000] &quot;GET /phpmyadmin/ HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:09 +0000] &quot;GET /administrator/ HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:12 +0000] &quot;GET /.git/config HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;sqlmap/1.7.11#stable (https://sqlmap.org)&quot;</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-medium">
+      <header>
+        <span class="badge">MEDIUM</span>
+        <h3>8. Probing for sensitive paths and injection payloads</h3>
+        <span class="rule-id">LS-007</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>196.52.43.87</code> <span class="geo">Victoria, SC</span></span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 02:41:00 &rarr; 02:42:45 <span class='muted'>(20 events)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1190 - Exploit Public-Facing Application</span> <span class='chip'>T1083 - File and Directory Discovery</span></span></div></div>
+      <p class="desc">196.52.43.87 requested 20 sensitive paths including /.aws/credentials, /.env, /.git/config, /actuator/env .... All were rejected by the server.</p>
+      <div class='rec'><strong>Recommended action.</strong> Block 196.52.43.87 and confirm .git/.env paths return 403/404.</div>
+      <details>
+        <summary>Evidence (5 sample lines)</summary>
+        <ul class="evidence"><li><code>196.52.43.87 - - [11/Mar/2025:02:41:00 +0000] &quot;GET /wp-login.php HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;sqlmap/1.7.11#stable (https://sqlmap.org)&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:03 +0000] &quot;GET /wp-admin/ HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:06 +0000] &quot;GET /phpmyadmin/ HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:12 +0000] &quot;GET /.git/config HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;sqlmap/1.7.11#stable (https://sqlmap.org)&quot;</code></li><li><code>196.52.43.87 - - [11/Mar/2025:02:41:15 +0000] &quot;GET /.env HTTP/1.1&quot; 404 162 &quot;-&quot; &quot;python-requests/2.31.0&quot;</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-low">
+      <header>
+        <span class="badge">LOW</span>
+        <h3>9. Successful login outside business hours</h3>
+        <span class="rule-id">LS-004</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>156.146.55.12</code> <span class="geo">Singapore, SG</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>m.rahman</span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 23:00:00 &rarr; 23:00:00 <span class='muted'>(1 event)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1078 - Valid Accounts</span></span></div></div>
+      <p class="desc">&#x27;m.rahman&#x27; authenticated successfully 1 time outside 07:00-20:00 from Singapore, SG. Benign for on-call staff; worth confirming otherwise.</p>
+      <div class='rec'><strong>Recommended action.</strong> Cross-check against the on-call rota before escalating.</div>
+      <details>
+        <summary>Evidence (1 sample line)</summary>
+        <ul class="evidence"><li><code>Mar 11 23:00:00 web-01 sshd[9681]: Accepted publickey for m.rahman from 156.146.55.12 port 44210 ssh2</code></li></ul>
+      </details>
+    </article>
+    <article class="finding sev-low">
+      <header>
+        <span class="badge">LOW</span>
+        <h3>10. Successful login outside business hours</h3>
+        <span class="rule-id">LS-004</span>
+      </header>
+      <div class="meta"><div class='row'><span class='key'>Source IP</span><span class='val'><code>45.83.12.9</code> <span class="geo">Amsterdam, NL</span></span></div><div class='row'><span class='key'>Accounts</span><span class='val'>root</span></div><div class='row'><span class='key'>Window</span><span class='val'>2025-03-11 03:47:00 &rarr; 03:47:00 <span class='muted'>(1 event)</span></span></div><div class='row'><span class='key'>MITRE ATT&CK</span><span class='val'><span class='chip'>T1078 - Valid Accounts</span></span></div></div>
+      <p class="desc">&#x27;root&#x27; authenticated successfully 1 time outside 07:00-20:00 from Amsterdam, NL. Benign for on-call staff; worth confirming otherwise.</p>
+      <div class='rec'><strong>Recommended action.</strong> Cross-check against the on-call rota before escalating.</div>
+      <details>
+        <summary>Evidence (1 sample line)</summary>
+        <ul class="evidence"><li><code>Mar 11 03:47:00 web-01 sshd[12084]: Accepted password for root from 45.83.12.9 port 51999 ssh2</code></li></ul>
+      </details>
+    </article>
+
+  <footer>Produced by LogSentry &middot; findings are indicators, not verdicts &mdash; verify before acting.</footer>
+</div>
+</body>
+</html>
