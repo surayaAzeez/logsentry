@@ -2,7 +2,7 @@
 
 **A blue-team log analysis engine.** Point it at authentication and web server logs; it parses them into a common event model, runs seven detection rules over the result, and produces an analyst-ready report with every finding mapped to a MITRE ATT&CK technique.
 
-[![CI](https://github.com/surayaazeez/logsentry/actions/workflows/ci.yml/badge.svg)](https://github.com/surayaazeez/logsentry/actions/workflows/ci.yml)
+[![CI](https://github.com/surayaAzeez/logsentry/actions/workflows/ci.yml/badge.svg)](https://github.com/surayaAzeez/logsentry/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Dependencies](https://img.shields.io/badge/runtime%20dependencies-0-brightgreen)
@@ -22,7 +22,7 @@ It ships with **zero runtime dependencies**. Stock Python 3.10 on a locked-down 
 ## Quick start
 
 ```bash
-git clone https://github.com/surayaazeez/logsentry.git
+git clone https://github.com/surayaAzeez/logsentry.git
 cd logsentry
 pip install -e ".[dev]"
 
